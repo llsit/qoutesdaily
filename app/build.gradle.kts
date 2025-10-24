@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.llsit.quotesdaily"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.material.icons.extended)
 
     implementation(libs.androidx.navigation3.ui)
     implementation(libs.androidx.navigation3.runtime)
@@ -60,6 +61,9 @@ dependencies {
     implementation(libs.mlkit.genai.rewriting)
     implementation(libs.bundles.koin.android)
     ksp(libs.koin.ksp.compiler)
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.ai)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
